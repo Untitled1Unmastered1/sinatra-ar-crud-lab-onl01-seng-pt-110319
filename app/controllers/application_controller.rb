@@ -19,7 +19,7 @@ class ApplicationController < Sinatra::Base
     
     @article = Article.create(params)
     
-    erb :show 
+    redirect 
   end 
   
   get '/articles' do 
