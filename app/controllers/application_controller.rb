@@ -46,7 +46,7 @@ class ApplicationController < Sinatra::Base
   patch '/articles/:id' do 
     
     @article = Article.update(params["title"], params["content"])
-    @article
+    @article.save 
     
     erb :show 
   end 
